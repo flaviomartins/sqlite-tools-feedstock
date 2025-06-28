@@ -27,8 +27,7 @@ fi
             --enable-threadsafe \
             --enable-load-extension \
             --disable-static \
-            --dynlink-tools \
-            --with-tclsh="${PREFIX}/bin/tclsh" \
+            --with-tclsh="${BUILD_PREFIX}/bin/tclsh" \
             CFLAGS="${CFLAGS} ${OPTIONS} -I${PREFIX}/include" \
             LDFLAGS="${LDFLAGS} -L${PREFIX}/lib" \
             ${PPC64LE}
