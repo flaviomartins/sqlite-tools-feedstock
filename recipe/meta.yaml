@@ -16,7 +16,7 @@ source:
 
 build:
   skip: true  # [win and arm64]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -84,7 +84,7 @@ outputs:
 
 about:
   home: http://www.sqlite.org/
-  license: Unlicense
+  license: blessing
   license_url: http://www.sqlite.org/copyright.html
   summary: Implements a self-contained, zero-configuration, SQL database engine
   description: |
