@@ -196,6 +196,3 @@ Feedstock Maintainers
 
 * [@flaviomartins](https://github.com/flaviomartins/)
 
-
-<!-- dummy commit to enable rerendering -->
-
