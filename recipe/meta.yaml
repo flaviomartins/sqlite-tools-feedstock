@@ -1,4 +1,4 @@
-{% set version = "3.53.2" %}
+{% set version = "3.53.3" %}
 {% set year = "2026" %}
 {% set version_split = version.split(".") %}
 {% set major = version_split[0] %}
@@ -12,11 +12,11 @@ package:
 
 source:
   url: https://www.sqlite.org/{{ year }}/sqlite-src-{{ version_coded }}.zip
-  sha256: cafff764c03f6d720968f746e2f47a986bbf12bf4c18904f1eb131c0b0b592d3
+  sha256: bb80bf8a3bffc19241ce8aba5a4bc74e9c3980013cb0b5f0f0976a99516942af
 
 build:
   skip: true  # [win and arm64]
-  number: 1
+  number: 0
 
 requirements:
   build:
