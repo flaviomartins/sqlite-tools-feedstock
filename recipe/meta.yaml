@@ -1,4 +1,4 @@
-{% set version = "3.53.4" %}
+{% set version = "3.54.0" %}
 {% set year = "2026" %}
 {% set version_split = version.split(".") %}
 {% set major = version_split[0] %}
@@ -62,24 +62,6 @@ outputs:
     test:
       commands:
         - sqlite3_rsync --version
-  - name: sqlite_analyzer
-    files:
-      - bin/sqlite3_analyze              # [unix]
-      - Library\bin\sqlite3_analyze.exe  # [win]
-    requirements:
-      build:
-        - {{ compiler('c') }}
-        - {{ stdlib("c") }}
-        - make  # [not win]
-        - tk
-      host:
-        - libsqlite >={{ version }}  # [not win]
-        - zlib                       # [not win]
-        - tk
-
-    test:
-      commands:
-        - sqlite3_analyze --version
 
 
 about:

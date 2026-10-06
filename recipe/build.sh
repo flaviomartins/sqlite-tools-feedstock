@@ -37,6 +37,3 @@ install -m755 sqldiff "${PREFIX}/bin/sqldiff"
 
 make -j${CPU_COUNT} sqlite3_rsync
 install -m755 sqlite3_rsync "${PREFIX}/bin/sqlite3_rsync"
-
-make -j${CPU_COUNT} sqlite3_analyzer
-install -m755 sqlite3_analyzer "${PREFIX}/bin/sqlite3_analyze"
