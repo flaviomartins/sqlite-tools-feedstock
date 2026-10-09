@@ -12,7 +12,7 @@ fi
 export OPTIONS="${OPTIONS:-}"
 
 if [[ $target_platform =~ linux.* ]]; then
-    export CFLAGS="${CFLAGS} -DHAVE_PREAD64 -DHAVE_PWRITE64"
+    export CPPFLAGS="${CPPFLAGS} -DHAVE_PREAD64 -DHAVE_PWRITE64"
 fi
 
 if [[ "$target_platform" == "linux-ppc64le" ]]; then
@@ -21,6 +21,9 @@ else
     export PPC64LE=""
 fi
 
+export CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include ${OPTIONS}"
+export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
+
 ./configure --prefix=${PREFIX} \
             --build=${BUILD} \
             --host=${HOST} \
@@ -28,8 +31,6 @@ fi
             --enable-load-extension \
             --disable-static \
             --with-tclsh="${BUILD_PREFIX}/bin/tclsh" \
-            CFLAGS="${CFLAGS} ${OPTIONS} -I${PREFIX}/include" \
-            LDFLAGS="${LDFLAGS} -L${PREFIX}/lib" \
             ${PPC64LE}
 
 make -j${CPU_COUNT} sqldiff
