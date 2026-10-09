@@ -70,7 +70,6 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-sqldiff-green.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-sqlite__analyzer-green.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqlite_analyzer.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqlite_analyzer.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqlite_analyzer.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-sqlite__rsync-green.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) |
 
 Installing sqlite-tools
@@ -90,7 +89,7 @@ How to use
 <summary>With conda</summary>
 
 ```
-conda install sqldiff sqlite_analyzer sqlite_rsync
+conda install sqldiff sqlite_rsync
 ```
 
 </details>
@@ -99,7 +98,7 @@ conda install sqldiff sqlite_analyzer sqlite_rsync
 <summary>With mamba</summary>
 
 ```
-mamba install sqldiff sqlite_analyzer sqlite_rsync
+mamba install sqldiff sqlite_rsync
 ```
 
 </details>
@@ -109,9 +108,9 @@ mamba install sqldiff sqlite_analyzer sqlite_rsync
 
 ```
 # for adding to your local project
-pixi add sqldiff sqlite_analyzer sqlite_rsync
+pixi add sqldiff sqlite_rsync
 # for installing globally
-pixi global install sqldiff sqlite_analyzer sqlite_rsync
+pixi global install sqldiff sqlite_rsync
 ```
 
 </details>
