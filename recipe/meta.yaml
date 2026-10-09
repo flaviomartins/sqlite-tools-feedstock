@@ -23,11 +23,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - make  # [not win]
-    - tk
+    - tcl >=9
   host:
     - libsqlite >={{ version }}  # [not win]
     - zlib                       # [not win]
-    - tk
+    - tcl >=9
 
 outputs:
   - name: sqldiff
