@@ -69,6 +69,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-dbhash-green.svg)](https://anaconda.org/conda-forge/dbhash) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dbhash.svg)](https://anaconda.org/conda-forge/dbhash) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dbhash.svg)](https://anaconda.org/conda-forge/dbhash) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dbhash.svg)](https://anaconda.org/conda-forge/dbhash) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-sqldiff-green.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-sqlite__rsync-green.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) |
 
@@ -89,7 +90,7 @@ How to use
 <summary>With conda</summary>
 
 ```
-conda install sqldiff sqlite_rsync
+conda install dbhash sqldiff sqlite_rsync
 ```
 
 </details>
@@ -98,7 +99,7 @@ conda install sqldiff sqlite_rsync
 <summary>With mamba</summary>
 
 ```
-mamba install sqldiff sqlite_rsync
+mamba install dbhash sqldiff sqlite_rsync
 ```
 
 </details>
@@ -108,9 +109,9 @@ mamba install sqldiff sqlite_rsync
 
 ```
 # for adding to your local project
-pixi add sqldiff sqlite_rsync
+pixi add dbhash sqldiff sqlite_rsync
 # for installing globally
-pixi global install sqldiff sqlite_rsync
+pixi global install dbhash sqldiff sqlite_rsync
 ```
 
 </details>
@@ -118,13 +119,13 @@ pixi global install sqldiff sqlite_rsync
 Search package versions
 -----------------------
 
-It is possible to list all of the versions of `sqldiff` available on your platform:
+It is possible to list all of the versions of `dbhash` available on your platform:
 
 <details>
 <summary>With conda</summary>
 
 ```
-conda search sqldiff --channel conda-forge
+conda search dbhash --channel conda-forge
 ```
 
 </details>
@@ -133,7 +134,7 @@ conda search sqldiff --channel conda-forge
 <summary>With mamba</summary>
 
 ```
-mamba search sqldiff --channel conda-forge
+mamba search dbhash --channel conda-forge
 ```
 
 </details>
@@ -142,7 +143,7 @@ mamba search sqldiff --channel conda-forge
 <summary>With pixi</summary>
 
 ```
-pixi search sqldiff --channel conda-forge
+pixi search dbhash --channel conda-forge
 ```
 
 </details>
@@ -152,13 +153,13 @@ pixi search sqldiff --channel conda-forge
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search sqldiff --channel conda-forge
+mamba repoquery search dbhash --channel conda-forge
 
-# List packages depending on `sqldiff`:
-mamba repoquery whoneeds sqldiff --channel conda-forge
+# List packages depending on `dbhash`:
+mamba repoquery whoneeds dbhash --channel conda-forge
 
-# List dependencies of `sqldiff`:
-mamba repoquery depends sqldiff --channel conda-forge
+# List dependencies of `dbhash`:
+mamba repoquery depends dbhash --channel conda-forge
 ```
 
 </details>
