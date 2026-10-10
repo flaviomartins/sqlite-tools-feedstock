@@ -33,6 +33,9 @@ export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
             --with-tclsh="${BUILD_PREFIX}/bin/tclsh" \
             ${PPC64LE}
 
+make -j${CPU_COUNT} dbhash
+install -m755 dbhash "${PREFIX}/bin/dbhash"
+
 make -j${CPU_COUNT} sqldiff
 install -m755 sqldiff "${PREFIX}/bin/sqldiff"
 
