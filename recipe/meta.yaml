@@ -30,6 +30,22 @@ requirements:
     - tcl >=9
 
 outputs:
+  - name: dbhash
+    files:
+      - bin/dbhash              # [unix]
+      - Library\bin\dbhash.exe  # [win]
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+        - make  # [not win]
+      host:
+        - libsqlite >={{ version }}  # [not win]
+        - zlib                       # [not win]
+
+    test:
+      commands:
+        - dbhash --help
   - name: sqldiff
     files:
       - bin/sqldiff              # [unix]
