@@ -7,15 +7,15 @@ Home: http://www.sqlite.org/
 
 Package license: [blessing](http://www.sqlite.org/copyright.html)
 
-Summary: Implements a self-contained, zero-configuration, SQL database engine
+Summary: C library that implements an SQL database engine
 
-Development: https://github.com/mackyle/sqlite
+Development: https://www.sqlite.org/src/dir?ci=trunk
 
 Documentation: http://www.sqlite.org/docs.html
 
-SQLite is a self-contained, high-reliability, embedded, full-featured,
-public-domain, SQL database engine.It is the most used database engine
-in the world.
+SQLite is a small, fast, serverless SQL database engine. Programs that
+link with this library get SQL database access without running a
+separate RDBMS process.
 
 
 Current build status
@@ -56,13 +56,6 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/sqlite-tools-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=26057&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/sqlite-tools-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
@@ -77,7 +70,6 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-sqldiff-green.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-sqlite__analyzer-green.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqlite_analyzer.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqlite_analyzer.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqlite_analyzer.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-sqlite__rsync-green.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) |
 
 Installing sqlite-tools
@@ -90,31 +82,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `sqldiff, sqlite_analyzer, sqlite_rsync` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
-conda install sqldiff sqlite_analyzer sqlite_rsync
+conda install sqldiff sqlite_rsync
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
-mamba install sqldiff sqlite_analyzer sqlite_rsync
+mamba install sqldiff sqlite_rsync
 ```
 
-It is possible to list all of the versions of `sqldiff` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add sqldiff sqlite_rsync
+# for installing globally
+pixi global install sqldiff sqlite_rsync
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `sqldiff` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search sqldiff --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search sqldiff --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search sqldiff --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -126,6 +160,8 @@ mamba repoquery whoneeds sqldiff --channel conda-forge
 # List dependencies of `sqldiff`:
 mamba repoquery depends sqldiff --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
